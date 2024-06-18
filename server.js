@@ -30,6 +30,7 @@ io.on('connection', (socket) => {
 
     // Broadcast message to all connected clients
     io.emit('chat message', msg);
+    io.emit("connect", "User Connected");
   });
 
   // Handle disconnection event
